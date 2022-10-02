@@ -23,6 +23,7 @@ const executeEvery = interval => {
     if(!data) return
     console.clear()
     console.table(filter(data.data))
+    console.log(`Porcentagem das Urnas Apuradas ${data.data.psi}%`)
     console.log(`Atualizado em: ${new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}`)
   }, interval)
 }
