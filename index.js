@@ -20,6 +20,7 @@ const executeEvery = interval => {
     try {
       data = await fetch()
     } catch(err) {}
+    if(!data) return
     console.clear()
     console.table(filter(data.data))
     console.log(`Atualizado em: ${new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}`)
